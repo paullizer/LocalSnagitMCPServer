@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "snagit": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["-m", "snagit_mcp"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "SNAGIT_MCP_OUTPUT_DIR": "${workspaceFolder}/recordings"
+      }
+    }
+  }
+}

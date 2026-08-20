@@ -1,0 +1,19 @@
+[project]
+name = "snagit-mcp"
+version = "0.1.0"
+description = "Local MCP server that drives TechSmith Snagit video recording on Windows"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "pywin32>=306; sys_platform == 'win32'",
+]
+
+[project.scripts]
+snagit-mcp = "snagit_mcp.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
